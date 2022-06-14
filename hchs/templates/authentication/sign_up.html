@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SIGN UP
+{% endblock %}
+
+{% block content %}
+<form action="/sign_up" method="post">
+    {%csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="Only letters and numbers" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" Required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">First Name</label>
+        <input type="text" name="fname" class="form-control" id="exampleFormControlInput1" placeholder="First Name" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+        <input type="text" name="lname" class="form-control" id="exampleFormControlInput1" placeholder="Last Name" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="password" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Confirm your Password</label>
+        <input type="password" name="pass_confirm" class="form-control" id="exampleFormControlInput1" placeholder="password" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">SIGN UP</button>
+        <button type="reset" class="btn btn-secondary">CLEAR</button>
+    </div>
+    <br>
+{% endblock %}

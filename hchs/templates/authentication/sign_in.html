@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SIGN UP
+{% endblock %}
+
+{% block content %}
+<form action="/sign_in" method="post">
+    {%csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Username" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter your password" Required>
+    </div>
+    <br>
+    <div class="mb-3">
+        <button type="submit">SIGN IN</button>
+    </div>
+    <br>
+{% endblock %}
